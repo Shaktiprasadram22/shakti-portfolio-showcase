@@ -11,7 +11,7 @@ const certificates = [
     date: "2024",
     image: "lovable-uploads/9824ed48-15fe-4564-8e55-c94feb5a95bd.png",
     verifyLink:
-      "https://media.geeksforgeeks.org/certificates/802960bf28443f99668fa7aae804aa4.pdf",
+      "https://www.geeksforgeeks.org/certificate/802960bf284438f99668fa7aae804aa4",
   },
   {
     id: 2,
@@ -19,7 +19,8 @@ const certificates = [
     issuer: "Coursera - Codio",
     date: "Nov 2023",
     image: "lovable-uploads/beadc239-bcd9-4b69-9634-a141a3ef23b3.png",
-    verifyLink: "https://coursera.org/verify/J8PKCZ97MNX",
+    verifyLink:
+      "https://www.coursera.org/account/accomplishments/specialization/LJ8PKCZ97MNX",
   },
   {
     id: 3,
@@ -27,7 +28,8 @@ const certificates = [
     issuer: "NIIT - Coursera",
     date: "May 2024",
     image: "lovable-uploads/d78427b7-fab0-4b0d-a964-d56c0cfea9ab.png",
-    verifyLink: "https://coursera.org/verify/MGLN4AGKX22",
+    verifyLink:
+      "https://www.coursera.org/account/accomplishments/verify/MGLN4AGKXK22",
   },
   {
     id: 4,
