@@ -6,6 +6,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+// Register service worker on load
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log(
+          "Service Worker registered with scope:",
+          registration.scope
+        );
+      })
+      .catch((error) => {
+        console.log("Service Worker registration failed:", error);
+      });
+  });
+}
+
 const queryClient = new QueryClient();
 
 const App = () => (
