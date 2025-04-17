@@ -11,7 +11,7 @@ const projects = [
     title: "Photography Website",
     description:
       "A responsive photography portfolio website built with React and Tailwind CSS, featuring dynamic galleries and contact forms.",
-    image: "public/lovable-uploads/89e94900-2753-4fa5-8c41-d71b9f03bdf6.png",
+    image: "/lovable-uploads/89e94900-2753-4fa5-8c41-d71b9f03bdf6.png",
     category: "web",
     technologies: ["React", "Tailwind CSS", "Firebase"],
     liveLink: "https://photo-graphy-website-9efe.vercel.app/login",
@@ -24,7 +24,7 @@ const projects = [
     title: "Trading Tracker",
     description:
       "A stock market tracking application built with React, Node.js, and financial APIs to monitor investments and analyze market trends.",
-    image: "public/lovable-uploads/1b19caf6-6b20-4ea7-9cef-3156716b2bcd.png",
+    image: "/lovable-uploads/1b19caf6-6b20-4ea7-9cef-3156716b2bcd.png",
     category: "web",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Financial APIs"],
     liveLink: "https://shimmering-kelpie-d082e5.netlify.app/",
@@ -50,7 +50,7 @@ const projects = [
     title: "E-commerce Platform",
     description:
       "A full-featured online shopping platform with product catalog, cart system, and payment integration.",
-    image: "public/lovable-uploads/ecom.webp",
+    image: "/lovable-uploads/ecom.webp",
     category: "web",
     technologies: ["Next.js", "MongoDB", "Stripe", "Redux"],
     liveLink: "https://serene-griffin-606c16.netlify.app/",
