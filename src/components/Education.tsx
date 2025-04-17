@@ -29,7 +29,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="section-container bg-gray-50">
+    <section id="education" className="section-container bg-gradient-to-b from-gray-50 to-white transition-all duration-500 ease-in-out">
       <h2 className="section-title">Education</h2>
       
       <div className="max-w-4xl mx-auto mt-12 space-y-8">

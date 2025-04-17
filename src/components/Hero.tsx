@@ -6,11 +6,11 @@ import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden bg-portfolio-blue">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-portfolio-blue via-portfolio-light-blue to-portfolio-medium-blue opacity-80"></div>
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden bg-portfolio-blue transition-all duration-700 ease-in-out">
+      {/* Background gradient with smooth transition */}
+      <div className="absolute inset-0 bg-gradient-to-b from-portfolio-blue via-portfolio-light-blue to-portfolio-medium-blue opacity-80 transition-all duration-1000"></div>
       
-      {/* Animated background pattern (optional) */}
+      {/* Animated background pattern with subtle animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6TTAgMGg2MHY2MEgweiIvPjwvZz48L2c+PC9zdmc+')]"></div>
       </div>
