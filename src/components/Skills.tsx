@@ -61,21 +61,25 @@ const softSkills = [
     name: "Team Player 🤝",
     icon: <Handshake className="h-6 w-6" />,
     description: "Collaborated effectively in group projects at university and hackathons. Led a team of 4 in developing a full-stack web application for the Web-Ka Thon competition.",
+    examples: "Led a team of 4 developers during the Web-Ka Thon hackathon, where we placed in the top 10. Coordinated tasks, managed timelines, and encouraged team participation to ensure project success."
   },
   {
     name: "Problem Solver 💡",
     icon: <Lightbulb className="h-6 w-6" />,
     description: "Solved 350+ DSA questions on LeetCode and GeeksforGeeks. Implemented creative solutions to complex challenges in my Trading Tracker and Photography Website projects.",
+    examples: "Optimized database queries in the Trading Tracker app that reduced load time by 40%. Solved a critical rendering issue in the Photography Website that was causing memory leaks."
   },
   {
     name: "Critical Thinker 🧠",
     icon: <Brain className="h-6 w-6" />,
     description: "Applied analytical thinking to optimize database queries and improve application performance. Conducted thorough code reviews to identify potential issues and suggest improvements.",
+    examples: "Analyzed user flow in the Portfolio Website and redesigned navigation to improve user experience. Reviewed peers' code during hackathons to identify potential security vulnerabilities."
   },
   {
     name: "Quick Learner 🚀",
     icon: <Rocket className="h-6 w-6" />,
     description: "Rapidly adapted to new technologies like React, Node.js, and AWS. Self-taught Docker and cloud computing concepts to enhance project deployment workflows.",
+    examples: "Mastered Tailwind CSS in just two weeks to redesign the Portfolio Website. Learned MongoDB and implemented it in the Trading Tracker app within a month, despite having no prior NoSQL experience."
   },
 ];
 
@@ -122,10 +126,31 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="section-container bg-gradient-to-b from-white to-gray-50 transition-all duration-500 ease-in-out">
-      <h2 className="section-title">Skills & Expertise</h2>
+    <section id="skills" className="section-container bg-gradient-to-b from-white to-gray-50 transition-all duration-500 ease-in-out relative overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(0,245,212,0.05)_0%,rgba(15,160,206,0.05)_25%,transparent_50%)]"></div>
+        
+        {/* Animated floating shapes */}
+        {Array(15).fill(0).map((_, i) => (
+          <div 
+            key={i}
+            className="absolute bg-portfolio-teal/5 rounded-full blur-xl"
+            style={{
+              width: `${Math.random() * 200 + 50}px`,
+              height: `${Math.random() * 200 + 50}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `float-animation-${i % 3} ${Math.random() * 20 + 15}s infinite alternate`,
+              opacity: Math.random() * 0.7
+            }}
+          />
+        ))}
+      </div>
+
+      <h2 className="section-title relative z-10">Skills & Expertise</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-12 relative z-10">
         {skills.map((category, index) => (
           <div key={index} className="animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-portfolio-blue">
@@ -153,7 +178,7 @@ const Skills = () => {
       </div>
       
       {/* Soft Skills */}
-      <div className="mt-16">
+      <div className="mt-16 relative z-10">
         <h3 className="text-xl md:text-2xl font-bold text-center mb-8 text-portfolio-blue">Soft Skills</h3>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -173,7 +198,7 @@ const Skills = () => {
       </div>
 
       {/* Things I Love */}
-      <div className="mt-16">
+      <div className="mt-16 relative z-10">
         <h3 className="text-xl md:text-2xl font-bold text-center mb-8 text-portfolio-blue">Things I Love</h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -205,10 +230,30 @@ const Skills = () => {
             </DialogTitle>
           </DialogHeader>
           <div className="p-4 text-gray-700">
-            <p>{selectedSkill?.description}</p>
+            <p className="mb-4">{selectedSkill?.description}</p>
+            <div className="mt-4 border-t pt-4">
+              <h4 className="font-semibold text-portfolio-blue mb-2">Where I Used This Skill:</h4>
+              <p>{selectedSkill?.examples}</p>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Add animation keyframes */}
+      <style jsx>{`
+        @keyframes float-animation-0 {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          100% { transform: translate(-30px, -30px) rotate(5deg); }
+        }
+        @keyframes float-animation-1 {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          100% { transform: translate(40px, -20px) rotate(-5deg); }
+        }
+        @keyframes float-animation-2 {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          100% { transform: translate(-20px, 40px) rotate(10deg); }
+        }
+      `}</style>
     </section>
   );
 };
