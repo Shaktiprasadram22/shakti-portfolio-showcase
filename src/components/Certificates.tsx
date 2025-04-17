@@ -55,7 +55,7 @@ const Certificates = () => {
 
   return (
     <section id="certificates" className="section-container bg-gray-50">
-      <h2 className="section-title">Certifications & Education</h2>
+      <h2 className="section-title">Certifications</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
         {certificates.map((certificate) => (

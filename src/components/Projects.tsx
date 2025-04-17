@@ -14,8 +14,8 @@ const projects = [
     image: "public/lovable-uploads/89e94900-2753-4fa5-8c41-d71b9f03bdf6.png",
     category: "web",
     technologies: ["React", "Tailwind CSS", "Firebase"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
+    liveLink: "https://photo-graphy-website-9efe.vercel.app/login",
+    githubLink: "https://github.com/Shaktiprasadram22/PhotoGraphyWebsite",
     details:
       "Created a professional photography portfolio with responsive image galleries, pricing packages, and contact forms. Implemented user authentication for client access to private galleries.",
   },
@@ -27,8 +27,8 @@ const projects = [
     image: "public/lovable-uploads/1b19caf6-6b20-4ea7-9cef-3156716b2bcd.png",
     category: "web",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Financial APIs"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
+    liveLink: "https://shimmering-kelpie-d082e5.netlify.app/",
+    githubLink: "https://github.com/Shaktiprasadram22/TradingTracker2.0",
     details:
       "Developed a comprehensive trading tracker with real-time market data, personalized watchlists, and trade logging features. Integrated with financial news APIs to provide latest market insights.",
   },
@@ -40,8 +40,8 @@ const projects = [
     image: "/lovable-uploads/Daily.webp",
     category: "mobile",
     technologies: ["React Native", "Redux", "Node.js", "MongoDB"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
+    liveLink: "https://lustrous-pithivier-0ca6bb.netlify.app/dashboard",
+    githubLink: "https://github.com/Shaktiprasadram22/Taskamanager",
     details:
       "Built a full-featured task management application with features like task categorization, due dates, priority levels, and team collaboration tools.",
   },
@@ -53,8 +53,8 @@ const projects = [
     image: "public/lovable-uploads/ecom.webp",
     category: "web",
     technologies: ["Next.js", "MongoDB", "Stripe", "Redux"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
+    liveLink: "https://serene-griffin-606c16.netlify.app/",
+    githubLink: "https://github.com/Shaktiprasadram22/Ecommerce1.0",
     details:
       "Created a responsive e-commerce platform with product search, filtering, user accounts, wishlist functionality, and secure payment processing.",
   },
