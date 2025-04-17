@@ -29,32 +29,10 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="section-container bg-gradient-to-b from-gray-50 to-white transition-all duration-500 ease-in-out relative overflow-hidden">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full">
-          {Array(20).fill(0).map((_, i) => (
-            <div 
-              key={i}
-              className="absolute rounded-full bg-portfolio-teal"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 20 + 5}px`,
-                height: `${Math.random() * 20 + 5}px`,
-                opacity: Math.random() * 0.3,
-                animation: `float ${Math.random() * 10 + 10}s linear infinite`,
-                animationDelay: `${Math.random() * 5}s`,
-                transform: `translateY(${Math.random() * 100}px)`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
+    <section id="education" className="section-container bg-gradient-to-b from-gray-50 to-white transition-all duration-500 ease-in-out">
       <h2 className="section-title">Education</h2>
       
-      <div className="max-w-4xl mx-auto mt-12 space-y-8 relative z-10">
+      <div className="max-w-4xl mx-auto mt-12 space-y-8">
         {educationData.map((item, index) => (
           <Card 
             key={index}
@@ -82,15 +60,6 @@ const Education = () => {
           </Card>
         ))}
       </div>
-
-      {/* Add keyframe animation at the component level */}
-      <style jsx>{`
-        @keyframes float {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-40px) rotate(180deg); }
-          100% { transform: translateY(0px) rotate(360deg); }
-        }
-      `}</style>
     </section>
   );
 };
