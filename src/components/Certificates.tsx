@@ -9,7 +9,7 @@ const certificates = [
     title: "Data Structures & Algorithms",
     issuer: "GeeksforGeeks",
     date: "2024",
-    image: "public/lovable-uploads/9824ed48-15fe-4564-8e55-c94feb5a95bd.png",
+    image: "lovable-uploads/9824ed48-15fe-4564-8e55-c94feb5a95bd.png",
     verifyLink:
       "https://media.geeksforgeeks.org/certificates/802960bf28443f99668fa7aae804aa4.pdf",
   },
@@ -18,7 +18,7 @@ const certificates = [
     title: "Programming in C++",
     issuer: "Coursera - Codio",
     date: "Nov 2023",
-    image: "public/lovable-uploads/beadc239-bcd9-4b69-9634-a141a3ef23b3.png",
+    image: "lovable-uploads/beadc239-bcd9-4b69-9634-a141a3ef23b3.png",
     verifyLink: "https://coursera.org/verify/J8PKCZ97MNX",
   },
   {
@@ -26,7 +26,7 @@ const certificates = [
     title: "Server-side JavaScript with Node.js",
     issuer: "NIIT - Coursera",
     date: "May 2024",
-    image: "public/lovable-uploads/d78427b7-fab0-4b0d-a964-d56c0cfea9ab.png",
+    image: "lovable-uploads/d78427b7-fab0-4b0d-a964-d56c0cfea9ab.png",
     verifyLink: "https://coursera.org/verify/MGLN4AGKX22",
   },
   {
@@ -34,8 +34,8 @@ const certificates = [
     title: "HTML, CSS, and Javascript for Web Developers",
     issuer: "Johns Hopkins University",
     date: "May 2024",
-    image: "public/lovable-uploads/6d3d04a7-64d7-4bf7-a903-4230ac24a607.png",
-    verifyLink: "coursera.org/verify/LG9M9F2SHP7U",
+    image: "lovable-uploads/6d3d04a7-64d7-4bf7-a903-4230ac24a607.png",
+    verifyLink: "https://coursera.org/verify/LG9M9F2SHP7U",
   },
   {
     id: 5,
