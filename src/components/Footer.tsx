@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Github, Linkedin, Mail, ChevronUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronUp, Code } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,24 +17,32 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Shaktiprasadram22" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors hover:scale-110 inline-block"
               >
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/Shaktiram22" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors hover:scale-110 inline-block"
               >
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:contact@example.com" 
-                className="text-gray-300 hover:text-white transition-colors"
+                href="https://leetcode.com/Shaktiprasadram22/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors hover:scale-110 inline-block"
+              >
+                <Code size={20} />
+              </a>
+              <a 
+                href="mailto:shaktiram.lucifer@gmail.com" 
+                className="text-gray-300 hover:text-white transition-colors hover:scale-110 inline-block"
               >
                 <Mail size={20} />
               </a>
@@ -45,7 +53,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['About', 'Skills', 'Projects', 'Certificates', 'Achievements', 'Contact'].map((item) => (
+              {['About', 'Skills', 'Projects', 'Education', 'Certificates', 'Achievements', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link 
                     to={item.toLowerCase()} 
@@ -53,7 +61,7 @@ const Footer = () => {
                     smooth={true} 
                     offset={-70} 
                     duration={500} 
-                    className="text-gray-300 hover:text-portfolio-teal transition-colors cursor-pointer"
+                    className="text-gray-300 hover:text-portfolio-teal transition-colors cursor-pointer story-link"
                   >
                     {item}
                   </Link>
@@ -67,8 +75,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-300">
               <p>Bangalore, India</p>
-              <p>Email: contact@shakti.dev</p>
-              <p>Phone: +91 12345 67890</p>
+              <p>Email: shaktiram.lucifer@gmail.com</p>
+              <p>Phone: +91 8917583070</p>
             </div>
           </div>
         </div>
@@ -82,7 +90,7 @@ const Footer = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="mt-4 md:mt-0 text-gray-400 hover:text-white cursor-pointer flex items-center"
+            className="mt-4 md:mt-0 text-gray-400 hover:text-white cursor-pointer flex items-center hover-scale"
           >
             <span className="mr-2">Back to top</span>
             <ChevronUp size={16} />

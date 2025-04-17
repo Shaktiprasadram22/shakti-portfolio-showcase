@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Github, ExternalLink, Info } from 'lucide-react';
+import { Github, ExternalLink, Info, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const projects = [
@@ -74,7 +74,7 @@ const Projects = () => {
         <TabsContent value={activeTab} className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
-              <Card key={project.id} className="project-card group overflow-hidden">
+              <Card key={project.id} className="project-card group overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -134,8 +134,8 @@ const Projects = () => {
       
       {/* Project Details Dialog */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-auto">
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-auto animate-scale-in">
             <div className="relative h-56 md:h-64">
               <img 
                 src={selectedProject.image} 

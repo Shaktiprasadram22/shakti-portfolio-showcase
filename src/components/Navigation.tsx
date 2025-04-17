@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MoonStar, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-scroll";
 
@@ -33,6 +33,7 @@ const Navigation = () => {
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
+    { name: 'Education', to: 'education' },
     { name: 'Certificates', to: 'certificates' },
     { name: 'Achievements', to: 'achievements' },
     { name: 'Contact', to: 'contact' },
@@ -68,12 +69,12 @@ const Navigation = () => {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="text-white hover:text-portfolio-teal transition-colors cursor-pointer"
+                  className="text-white hover:text-portfolio-teal transition-colors cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-portfolio-teal after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-bottom-left"
                 >
                   {link.name}
                 </Link>
               ))}
-              <Button size="sm" variant="outline" className="ml-4 text-white border-portfolio-teal hover:bg-portfolio-teal hover:text-white">
+              <Button size="sm" variant="outline" className="ml-4 text-white border-portfolio-teal hover:bg-portfolio-teal hover:text-white transition-all">
                 Resume
               </Button>
             </div>
@@ -95,7 +96,7 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-portfolio-light-blue">
+        <div className="md:hidden bg-portfolio-light-blue animate-fade-in">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
@@ -105,14 +106,14 @@ const Navigation = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-white hover:text-portfolio-teal block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+                className="text-white hover:text-portfolio-teal block px-3 py-2 rounded-md text-base font-medium cursor-pointer transition-all hover:bg-portfolio-blue/20"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
             <div className="px-3 py-2">
-              <Button size="sm" className="w-full bg-portfolio-teal hover:bg-portfolio-teal/80 text-white">
+              <Button size="sm" className="w-full bg-portfolio-teal hover:bg-portfolio-teal/80 text-white transition-all">
                 Resume
               </Button>
             </div>
