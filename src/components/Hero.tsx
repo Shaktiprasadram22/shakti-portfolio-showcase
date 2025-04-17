@@ -29,28 +29,32 @@ const Hero = () => {
         <div className="animate-fade-in animation-delay-500 flex flex-col sm:flex-row justify-center gap-4 mb-12">
           <Button
             size="lg"
-            className="bg-portfolio-teal hover:bg-portfolio-teal/80 text-white px-8"
+            className="bg-portfolio-teal hover:bg-portfolio-teal/80 text-white px-8 transform transition-transform hover:scale-105"
           >
-            View My Work
+            <Link to="projects" spy={true} smooth={true} offset={-70} duration={500} className="w-full h-full">
+              View My Work
+            </Link>
           </Button>
           <Button
             size="lg"
             variant="outline" 
-            className="border-white text-white hover:bg-white/10"
+            className="border-white text-white hover:bg-white/10 transform transition-transform hover:scale-105"
           >
-            Get In Touch
+            <Link to="contact" spy={true} smooth={true} offset={-70} duration={500} className="w-full h-full">
+              Get In Touch
+            </Link>
           </Button>
         </div>
         
         {/* Social Links */}
         <div className="animate-fade-in animation-delay-700 flex justify-center gap-6 mb-16">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-teal transition-colors">
+          <a href="https://github.com/Shaktiprasadram22" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-teal transition-colors transform hover:scale-125">
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-teal transition-colors">
+          <a href="https://www.linkedin.com/in/shaktiram22/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-teal transition-colors transform hover:scale-125">
             <Linkedin size={24} />
           </a>
-          <a href="mailto:contact@example.com" className="text-white hover:text-portfolio-teal transition-colors">
+          <a href="mailto:shaktiram.lucifer@gmail.com" className="text-white hover:text-portfolio-teal transition-colors transform hover:scale-125">
             <Mail size={24} />
           </a>
         </div>
@@ -62,7 +66,7 @@ const Hero = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="animate-bounce absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white cursor-pointer"
+          className="animate-bounce absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white cursor-pointer hover:text-portfolio-teal transition-colors"
         >
           <ChevronDown size={32} />
         </Link>

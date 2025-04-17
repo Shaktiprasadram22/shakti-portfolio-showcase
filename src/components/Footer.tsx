@@ -25,7 +25,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/Shaktiram22" 
+                href="https://www.linkedin.com/in/shaktiram22/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors hover:scale-110 inline-block"
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://leetcode.com/Shaktiprasadram22/" 
+                href="https://leetcode.com/u/Shaktiprasadram22/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors hover:scale-110 inline-block"

@@ -140,7 +140,7 @@ const Contact = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/Shaktiram22" 
+                  href="https://www.linkedin.com/in/shaktiram22/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-all hover:scale-110"
@@ -148,7 +148,7 @@ const Contact = () => {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="https://leetcode.com/Shaktiprasadram22/" 
+                  href="https://leetcode.com/u/Shaktiprasadram22/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-orange-600 text-white p-3 rounded-full hover:bg-orange-700 transition-all hover:scale-110"

@@ -5,7 +5,7 @@ import { GraduationCap, Calendar, School } from 'lucide-react';
 
 const educationData = [
   {
-    institution: "Lovely Professional University",
+    institution: "Lovely Professional University, Phagwara, Punjab",
     degree: "Bachelor of Technology in Computer Science and Engineering",
     duration: "Jul 2022 – Present",
     cgpa: "7.59",
@@ -36,12 +36,12 @@ const Education = () => {
         {educationData.map((item, index) => (
           <Card 
             key={index}
-            className="overflow-hidden border-l-4 border-portfolio-teal hover:shadow-lg transition-all duration-300 animate-fade-in"
+            className="overflow-hidden border-l-4 border-portfolio-teal hover:shadow-lg transition-all duration-300 animate-fade-in hover:translate-x-2"
             style={{animationDelay: `${index * 0.15}s`}}
           >
             <CardContent className="p-6">
               <div className="flex items-start">
-                <div className="mr-6 bg-gray-100 p-4 rounded-full">
+                <div className="mr-6 bg-gray-100 p-4 rounded-full hover:rotate-12 transition-all duration-300">
                   {item.icon}
                 </div>
                 <div className="flex-1">
@@ -51,7 +51,7 @@ const Education = () => {
                     <Calendar size={16} className="mr-2" />
                     <span>{item.duration}</span>
                   </div>
-                  <div className="inline-flex items-center px-3 py-1 bg-portfolio-pale-blue text-portfolio-blue rounded-full">
+                  <div className="inline-flex items-center px-3 py-1 bg-portfolio-pale-blue text-portfolio-blue rounded-full animate-pulse">
                     <span className="font-medium">CGPA: {item.cgpa}</span>
                   </div>
                 </div>

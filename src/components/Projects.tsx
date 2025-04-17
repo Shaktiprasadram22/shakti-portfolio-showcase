@@ -74,7 +74,11 @@ const Projects = () => {
         <TabsContent value={activeTab} className="mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
-              <Card key={project.id} className="project-card group overflow-hidden hover:shadow-xl transition-all duration-300">
+              <Card 
+                key={project.id} 
+                className="project-card group overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedProject(project)}
+              >
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -87,7 +91,10 @@ const Projects = () => {
                       variant="ghost" 
                       size="icon" 
                       className="text-white hover:bg-white/20 rounded-full"
-                      onClick={() => setSelectedProject(project)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedProject(project);
+                      }}
                     >
                       <Info size={20} />
                     </Button>
@@ -113,6 +120,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-portfolio-blue hover:text-portfolio-teal"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Github size={20} />
                     </a>
@@ -121,6 +129,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-portfolio-blue hover:text-portfolio-teal"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <ExternalLink size={20} />
                     </a>
