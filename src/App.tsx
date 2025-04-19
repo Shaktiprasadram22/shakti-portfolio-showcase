@@ -1,43 +1,25 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation"; // Adjusted import path for Navigation
+import BlogSection from "./components/BlogSection"; // Adjusted import path for BlogSection
+import BlogPost from "./components/BlogPost"; // Adjusted import path for BlogPost
+import Index from "./pages/Index"; // Adjusted import path for Index page
+import NotFound from "./pages/NotFound"; // Adjusted import path for NotFound page
 
-// Register service worker on load
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/service-worker.js")
-      .then((registration) => {
-        console.log(
-          "Service Worker registered with scope:",
-          registration.scope
-        );
-      })
-      .catch((error) => {
-        console.log("Service Worker registration failed:", error);
-      });
-  });
-}
-
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <Router>
+      <Navigation /> {/* Navigation bar */}
+      <Routes>
+        <Route path="/" element={<Index />} /> {/* Main landing page */}
+        <Route path="*" element={<NotFound />} /> {/* 404 page */}
+        <Route path="/blog" element={<BlogSection />} /> {/* Blog section */}
+        <Route path="/blog/:postId" element={<BlogPost />} />{" "}
+        {/* Individual blog post page */}
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
+  

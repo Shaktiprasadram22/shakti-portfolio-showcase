@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-scroll";
+import { Menu, X } from "lucide-react"; // Icons for mobile menu
+import { Button } from "@/components/ui/button"; // Button component for Resume
+import { Link } from "react-scroll"; // For scroll navigation between sections
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,32 +10,34 @@ const Navigation = () => {
   // Update scrolled state based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 10); // Change background when scrolled past 10px
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on larger screens
+  // Close mobile menu on resize (larger screens)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setMobileMenuOpen(false);
+        setMobileMenuOpen(false); // Close mobile menu if window is resized to larger than mobile
       }
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Navigation links array (added Blog to the list)
   const navLinks = [
     { name: "Home", to: "hero" },
     { name: "About", to: "about" },
     { name: "Skills", to: "skills" },
     { name: "Projects", to: "projects" },
-    { name: "Upcoming Projects", to: "upcoming-projects" }, // Link to Upcoming Projects section
+    { name: "Upcoming Projects", to: "upcoming-projects" },
     { name: "Education", to: "education" },
     { name: "Certificates", to: "certificates" },
     { name: "Achievements", to: "achievements" },
+    { name: "Blog", to: "recent-blogs" }, // Added Blog link here
     { name: "Contact", to: "contact" },
   ];
 
@@ -119,7 +121,7 @@ const Navigation = () => {
                 offset={-70}
                 duration={500}
                 className="text-white hover:text-portfolio-teal block px-3 py-2 rounded-md text-base font-medium cursor-pointer transition-all hover:bg-portfolio-blue/20"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => setMobileMenuOpen(false)} // Close the menu after selection
               >
                 {link.name}
               </Link>
@@ -128,7 +130,7 @@ const Navigation = () => {
               <Button
                 size="sm"
                 variant="outline"
-                className="ml-4 text-white border-portfolio-teal "
+                className="ml-4 text-white border-portfolio-teal"
                 onClick={() =>
                   window.open(
                     "/lovable-uploads/Shakti Overleaf 10.0.pdf",
